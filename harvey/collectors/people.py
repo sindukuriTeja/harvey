@@ -23,7 +23,7 @@ import re
 from urllib.parse import unquote, urljoin, urlparse
 
 from harvey.collectors.profile import (
-    NON_NAME_WORDS, ROLE_HINT, _NOUN_SUFFIX, _reads_like_title, _strip_code,
+    NON_NAME_WORDS, _NOUN_SUFFIX, _reads_like_title, _strip_code,
 )
 
 # ── what a name is ───────────────────────────────────────────────────────
@@ -300,7 +300,7 @@ def _close_of(html: str, start: int, tag: str) -> int:
     """Index just past the element opened at ``start`` (same-tag depth
     count), looking no further than MAX_QUOTE_CHARS ahead; ``start`` when it
     doesn't close within that window."""
-    depth, pos = 0, start
+    depth = 0
     pattern = re.compile(rf"(?i)<(/?){re.escape(tag)}\b[^>]*?(/?)>")
     for m in pattern.finditer(html, start, min(len(html), start + MAX_QUOTE_CHARS)):
         if m.group(2):          # self-closing

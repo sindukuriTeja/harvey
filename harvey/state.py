@@ -20,8 +20,8 @@ import aiosqlite
 
 from harvey.models.company import Company
 from harvey.models.prospect import Prospect
-from harvey.models.campaign import Campaign, EmailStep  # noqa: F401 (EmailStep re-exported)
-from harvey.models.conversation import Conversation, Message  # noqa: F401
+from harvey.models.campaign import Campaign
+from harvey.models.conversation import Conversation
 
 from harvey.paths import PROJECT_ROOT
 from harvey.startups import parse_funding

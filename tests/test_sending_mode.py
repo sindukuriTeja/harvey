@@ -10,7 +10,6 @@ works at once: nothing autopilot approved goes out after that.
 import asyncio
 import shutil
 import sqlite3
-from pathlib import Path
 
 import pytest
 import pytest_asyncio

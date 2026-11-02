@@ -453,7 +453,6 @@ async def test_a_checkout_link_on_precleared_is_kept(state):
 
 @pytest.mark.asyncio
 async def test_count_due_cold_outbox_counts_only_due_approved_cold_email(state):
-    from harvey.agents.sender import Sender  # noqa: F401 (schema in place)
 
     a = await seed_prospect(state, email="a@example.com")
     b = await seed_prospect(state, email="b@example.com")

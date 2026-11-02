@@ -7,7 +7,6 @@ process other than the test runner itself (signal 0 on POSIX only).
 
 import os
 import sys
-from pathlib import Path
 
 import pytest
 from fastapi.testclient import TestClient

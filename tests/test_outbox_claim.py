@@ -184,7 +184,7 @@ async def test_the_send_uses_the_text_as_it_is_when_claimed(state, monkeypatch):
     # The queue is read once per cycle; the draft can be edited and
     # re-approved during the pacing pauses before its turn comes.
     pid = await seed_prospect(state, status="contacted")
-    item_id = await _approved(state, pid)
+    await _approved(state, pid)
     real_claim = state.claim_outbox_item
 
     async def edited_before_its_turn(item_id):

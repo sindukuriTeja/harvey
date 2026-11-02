@@ -10,7 +10,6 @@ import json
 import logging
 import random
 from datetime import date
-from pathlib import Path
 from typing import Optional
 from urllib.parse import quote_plus
 

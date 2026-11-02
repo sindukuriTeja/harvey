@@ -160,7 +160,6 @@ def _write_env_file(updates: dict[str, str]):
 
 def _check_harvey_pid() -> int | None:
     """Check if there's a running Harvey process from a PID file."""
-    global _harvey_process, _harvey_started_at
     if _harvey_process and _harvey_process.poll() is None:
         return _harvey_process.pid
     if PID_FILE.exists():

@@ -13,7 +13,6 @@ Two kinds of test, kept apart on purpose:
 
 import asyncio
 import hashlib
-import json
 import os
 import sys
 import tempfile

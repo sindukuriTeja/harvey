@@ -11,7 +11,6 @@ counted, and what happens when Codex can't be used.
 
 import asyncio
 import json
-import os
 import sqlite3
 import sys
 import tempfile

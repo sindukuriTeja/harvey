@@ -201,7 +201,7 @@ class SetupWizard:
 
     async def run(self):
         """Run the full interactive setup."""
-        print(f"""
+        print("""
 ╔══════════════════════════════════════════════════════════╗
 ║                                                          ║
 ║   Harvey Setup Wizard                                    ║
@@ -862,7 +862,7 @@ class SetupWizard:
 
     async def _print_summary(self):
         """Print final summary and next steps."""
-        print(f"""
+        print("""
 ╔══════════════════════════════════════════════════════════╗
 ║                                                          ║
 ║   Setup Complete!                                        ║

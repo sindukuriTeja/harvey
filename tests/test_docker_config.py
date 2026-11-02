@@ -1,5 +1,4 @@
 """Compose must preserve atomic saves without exposing the dashboard."""
-from pathlib import Path
 
 import yaml
 

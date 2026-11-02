@@ -116,7 +116,7 @@ async def test_sender_only_sends_verified(state, monkeypatch):
 
     class Env:
         instantly_api_key = "k"
-    sender = Sender(brain=None, state=state, config=_Cfg(), env=Env())
+    Sender(brain=None, state=state, config=_Cfg(), env=Env())
 
     # Filter logic mirrors _deploy_campaign's lead selection.
     from harvey.agents.sender import (

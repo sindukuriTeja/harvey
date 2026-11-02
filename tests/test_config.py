@@ -1,11 +1,8 @@
 """Tests for configuration loading."""
 
-import tempfile
-import os
 
-import yaml
 
-from harvey.config import HarveyConfig, EnvConfig, load_env
+from harvey.config import HarveyConfig, EnvConfig
 
 
 def test_config_from_dict():

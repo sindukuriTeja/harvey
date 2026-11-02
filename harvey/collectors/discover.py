@@ -1280,11 +1280,11 @@ class ScavioProvider(DiscoveryProvider):
                 if not isinstance(items, list) or any(not isinstance(item, dict) for item in items):
                     raise RuntimeError("Scavio: invalid results list")
                 for item in items:
-                    for field in ("title", "website", "link", "phone", "address", "type", "place_id"):
-                        if item.get(field) is not None and not isinstance(item[field], str):
+                    for key in ("title", "website", "link", "phone", "address", "type", "place_id"):
+                        if item.get(key) is not None and not isinstance(item[key], str):
                             raise RuntimeError("Scavio: invalid result field")
-                    for field in ("rating", "reviews", "position"):
-                        value = item.get(field)
+                    for key in ("rating", "reviews", "position"):
+                        value = item.get(key)
                         if value is not None and (isinstance(value, bool)
                                 or not isinstance(value, (int, float))
                                 or not math.isfinite(value) or value < 0):

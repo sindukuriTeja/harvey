@@ -4,7 +4,7 @@ stop-on-reply, bounces, and the kill switch."""
 import json
 import os
 import tempfile
-from datetime import datetime, timedelta, timezone
+from datetime import datetime, timezone
 
 import pytest
 import pytest_asyncio

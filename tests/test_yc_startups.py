@@ -239,7 +239,6 @@ async def test_the_reply_handler_uses_it_too(state, backed):
 
 def test_the_dashboard_estimate_takes_the_preset(monkeypatch):
     import harvey.dashboard as dash
-    from tests.test_dashboard_signals import client as _client  # noqa: F401
     import harvey.config as config_mod
     monkeypatch.setattr(config_mod, "load_config", lambda *a, **k: _config())
     queries = dash._discovery_queries({"provider": "serper", "preset": "yc"}, _config())

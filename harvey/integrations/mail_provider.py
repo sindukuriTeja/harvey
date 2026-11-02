@@ -95,7 +95,7 @@ def strip_quoted_reply(body: str) -> str:
         m = pattern.search(text)
         if m and m.start() < cut:
             cut = m.start()
-    head, tail = text[:cut], ""
+    head = text[:cut]
     for pattern in _ATTRIBUTION_HEADERS:
         m = pattern.search(head)
         if not m:

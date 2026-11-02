@@ -472,7 +472,7 @@ class Trainer:
 
         logger.info(f"Training Harvey on {base_url}...")
         print(f"\n{'='*60}")
-        print(f"  Harvey Training Mode")
+        print("  Harvey Training Mode")
         print(f"  Learning from: {base_url}")
         print(f"{'='*60}\n")
 
@@ -546,25 +546,25 @@ class Trainer:
             await self._generate_battle_cards(product_info, competitive_intel)
 
         print(f"\n{'='*60}")
-        print(f"  Training complete!")
+        print("  Training complete!")
         print(f"{'='*60}")
         print(f"\n  Product:      {config['product']['name']}")
         print(f"  Company:      {config['persona']['company']}")
         print(f"  ICP titles:   {', '.join(config['icp']['titles'])}")
         print(f"  Industries:   {', '.join(config['icp']['industries'])}")
         print(f"  Pages crawled: {len(self.scraped_pages)}")
-        print(f"\n  Files generated:")
+        print("\n  Files generated:")
         print(f"    - {config_path}")
-        print(f"    - skills/product_knowledge.md")
+        print("    - skills/product_knowledge.md")
         if competitive_intel.get("competitors"):
-            print(f"    - skills/competitive_intel.md")
+            print("    - skills/competitive_intel.md")
         if config["persona"].get("email") == guessed_email:
             print(f"\n  Review {config_path} and adjust as needed — especially the")
-            print(f"  persona name/email, which I guessed from your domain.")
+            print("  persona name/email, which I guessed from your domain.")
         else:
             print(f"\n  Review {config_path} and adjust as needed. Emails still go out as")
             print(f"  {config['persona'].get('name', '')} <{config['persona']['email']}>.")
-        print(f"  Then run: harvey run\n")
+        print("  Then run: harvey run\n")
 
         return config
 
@@ -794,7 +794,7 @@ Do NOT pursue prospects who:
 
         skills_path = PROJECT_ROOT / "skills" / "product_knowledge.md"
         skills_path.write_text(knowledge, encoding="utf-8")
-        print(f"      Generated: skills/product_knowledge.md")
+        print("      Generated: skills/product_knowledge.md")
 
     async def _generate_battle_cards(self, product_info: dict, competitive_intel: dict):
         """Generate competitive battle cards as a skill file."""
@@ -842,7 +842,7 @@ What prospects do instead of buying a solution like ours:
 
         skills_path = PROJECT_ROOT / "skills" / "competitive_intel.md"
         skills_path.write_text(cards, encoding="utf-8")
-        print(f"      Generated: skills/competitive_intel.md")
+        print("      Generated: skills/competitive_intel.md")
 
     def _build_config(
         self,

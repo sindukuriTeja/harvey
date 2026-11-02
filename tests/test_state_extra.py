@@ -1,7 +1,6 @@
 """Extra coverage for the state layer: CRUD, dedup, analytics, robustness."""
 
 import os
-import json
 
 import pytest
 import pytest_asyncio

@@ -876,7 +876,7 @@ def test_missing_keys_flags_template_placeholders_not_real_keys(value, missing):
 @pytest.mark.asyncio
 async def test_queries_ran_reports_what_actually_executed(state, config,
                                                           register):
-    fake = register(FakeProvider([[biz(domain="a.com")],
+    register(FakeProvider([[biz(domain="a.com")],
                                   [biz(domain="b.com")]]))
     report = await D.run_discovery(state, config, "fake", [
         D.DiscoveryQuery(term="roofer", location="Denver"),

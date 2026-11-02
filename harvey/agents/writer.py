@@ -9,7 +9,6 @@ Steps 2-3 stay campaign-level (proof point + breakup are less personal by
 design). Every draft still passes the deterministic pre-send gate.
 """
 
-import json
 import logging
 import re
 from datetime import datetime, timezone
